@@ -1,0 +1,595 @@
+16/12/2017
+
+mangesh@mangesh-VPCEH35EN:~/10th Python Batch/Basic Programs$ python3
+Python 3.5.2 (default, Nov 23 2017, 16:37:01) 
+[GCC 5.4.0 20160609] on linux
+Type "help", "copyright", "credits" or "license" for more information.
+>>> type(34)
+<class 'int'>
+>>> type('bg')
+<class 'str'>
+>>> type("mangesh")
+<class 'str'>
+>>> 
+
+******************************************************************************************************
+
+17/12/2017
+
+Python 2.7.12 (default, Nov 20 2017, 18:23:56) 
+[GCC 5.4.0 20160609] on linux2
+Type "help", "copyright", "credits" or "license" for more information.
+>>> import Sample_main
+This is First line __main__
+Its python main function
+>>> Sample_main.main()
+Its python main function
+>>> 
+>>> 
+>>> x=1000
+>>> id(x)
+41394056
+>>> y=x
+>>> id(y)
+41394056
+>>> z=1000
+>>> id(z)
+41393984
+>>> 
+>>> 
+>>> x="Hi"
+>>> type(x)
+<type 'str'>
+>>> x="122"
+>>> type(x)
+<type 'str'>
+>>> x=234
+>>> type(x)
+<type 'int'>
+>>> x=3+4i
+  File "<stdin>", line 1
+    x=3+4i
+         ^
+SyntaxError: invalid syntax
+>>> x=3+4j
+>>> type(x)
+<type 'complex'>
+>>> 
+>>> 
+>>> x=10
+>>> ++x
+10
+>>> x++
+  File "<stdin>", line 1
+    x++
+      ^
+SyntaxError: invalid syntax
+>>> 
+>>> 
+>>> 
+>>> x=-5
+>>> y=-5
+>>> z=-5
+>>> id(x),id(y),id(z)
+(41038312, 41038312, 41038312)
+>>> x=256
+>>> y=256
+>>> z=256
+>>> id(x),id(y),id(z)
+(41044000, 41044000, 41044000)
+>>> x=257
+>>> y=257
+>>> z=257
+>>> id(x),id(y),id(z)
+(41394032, 41394056, 41393936)
+>>> 
+>>> 
+>>> 
+>>> z="Hello"
+>>> id(x)
+41394032
+>>> id(z)
+139667742518464
+>>> y=z
+>>> id(y)
+139667742518464
+>>> x="hello"
+>>> id(x)
+139667742518320
+>>> 
+
+**************************************************************************************************************
+
+SLICING examples   2/1/18
+
+mangesh@mangesh-VPCEH35EN:~$ pyhton3
+No command 'pyhton3' found, did you mean:
+ Command 'python3' from package 'python3-minimal' (main)
+pyhton3: command not found
+mangesh@mangesh-VPCEH35EN:~$ python3
+Python 3.5.2 (default, Nov 23 2017, 16:37:01) 
+[GCC 5.4.0 20160609] on linux
+Type "help", "copyright", "credits" or "license" for more information.
+>>> y=mangesh sanjay kurambhatti
+  File "<stdin>", line 1
+    y=mangesh sanjay kurambhatti
+                   ^
+SyntaxError: invalid syntax
+>>> y="mangesh sanjay kurambhatti"
+>>> y[1::]
+'angesh sanjay kurambhatti'
+>>> y[1:1:]
+''
+>>> y[1:1:1]
+''
+>>> y[1::1]
+'angesh sanjay kurambhatti'
+>>> y[:1:1]
+'m'
+>>> y[::1]
+'mangesh sanjay kurambhatti'
+>>> y[::-1]
+'ittahbmaruk yajnas hsegnam'
+>>> y[::--2]
+'mnehsna uabat'
+>>> y[::-2]
+'ithmrkyja sga'
+>>> y="mangesh sanjay kurambhatti"
+>>> y[::-2]
+'ithmrkyja sga'
+>>> y[::0]
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+ValueError: slice step cannot be zero
+>>> y[2:3:1]
+'n'
+>>> y="mangesh sanjay kurambhatti"
+>>> y[1:1:1]
+''
+>>> y[1:3:]
+'an'
+>>> y[0:3:]
+'man'
+>>> y[-1:-3:]
+''
+>>> y[-3:-1:]
+'tt'
+>>> y[-3:-0:]
+''
+>>> y[-3::]
+'tti'
+>>> y[-5::]
+'hatti'
+>>> y[-5:6:]
+''
+>>> y[-5:-6:]
+''
+>>> y[-5::]
+'hatti'
+>>> y[:8:]
+'mangesh '
+>>> y[::]
+'mangesh sanjay kurambhatti'
+>>> y[-5:-1:]
+'hatt'
+>>> y[-5:0:]
+''
+>>> y[20:0:-2]
+'bau anshen'
+>>> y="mangesh sanjay kurambhatti"
+>>> y[-5::]
+'hatti'
+>>> y[::-5]
+'ibknsm'
+>>> y[-5:7:]
+''
+>>> y[-5:-7:]
+''
+>>> y[7:-5:]
+' sanjay kuramb'
+>>> y[1:-5:]
+'angesh sanjay kuramb'
+>>> y[1:-5:1]
+'angesh sanjay kuramb'
+>>> y[1:-5:2]
+'ags ajykrm'
+>>> y[1::2]
+'ags ajykrmhti'
+>>> y=[0,1,2,3,4,5,6,7,8,9]
+>>> y[1:9:]
+[1, 2, 3, 4, 5, 6, 7, 8]
+>>> y[1:10:]
+[1, 2, 3, 4, 5, 6, 7, 8, 9]
+>>> y[1:11:]
+[1, 2, 3, 4, 5, 6, 7, 8, 9]
+>>> y[::]
+[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+>>> y[0:8:]
+[0, 1, 2, 3, 4, 5, 6, 7]
+>>> y[0:8:2]
+[0, 2, 4, 6]
+>>> y[0:8:-2]
+[]
+>>> y[10:0:]
+[]
+>>> y[10::]
+[]
+>>> y[10:0:-2]
+[9, 7, 5, 3, 1]
+>>> y[10:0:=1]
+  File "<stdin>", line 1
+    y[10:0:=1]
+           ^
+SyntaxError: invalid syntax
+>>> y[10:0:-1]
+[9, 8, 7, 6, 5, 4, 3, 2, 1]
+>>> y[-5:0:-1]
+[5, 4, 3, 2, 1]
+>>> y[-5:0:]
+[]
+>>> y[-5:0]
+[]
+>>> y[0:-5]
+[0, 1, 2, 3, 4]
+>>> y[10:0:-1]
+[9, 8, 7, 6, 5, 4, 3, 2, 1]
+>>> y[-5:0:-1]
+[5, 4, 3, 2, 1]
+>>> y[-5:10:]
+[5, 6, 7, 8, 9]
+>>> y[10:5:]
+[]
+>>> y[10:5:-1]
+[9, 8, 7, 6]
+>>> y[10:4:-1]
+[9, 8, 7, 6, 5]
+>>> y[10:-5:-1]
+[9, 8, 7, 6]
+>>> y[10:-5:]
+[]
+>>> y[10:-5:1]
+[]
+>>> y[10:-5:-1]
+[9, 8, 7, 6]
+>>> y[10:-4:-1]
+[9, 8, 7]
+>>> y[10:-6:-1]
+[9, 8, 7, 6, 5]
+>>> y[10:-5:-1]
+[9, 8, 7, 6]
+>>> y[-7:0:]
+[]
+>>> y[-7:0:-]
+  File "<stdin>", line 1
+    y[-7:0:-]
+            ^
+SyntaxError: invalid syntax
+>>> y[-7:0:-1]
+[3, 2, 1]
+>>> y[-7::-1]
+[3, 2, 1, 0]
+>>> y[10:0:-2]
+[9, 7, 5, 3, 1]
+>>> y[10:0:-1]
+[9, 8, 7, 6, 5, 4, 3, 2, 1]
+>>> y[::-1]
+[9, 8, 7, 6, 5, 4, 3, 2, 1, 0]
+>>> y[-1::-1]
+[9, 8, 7, 6, 5, 4, 3, 2, 1, 0]
+>>> y[-1:0:-1]
+[9, 8, 7, 6, 5, 4, 3, 2, 1]
+>>> y[::]
+[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+>>> y[::-1]
+[9, 8, 7, 6, 5, 4, 3, 2, 1, 0]
+>>> y[::]
+[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+>>> y[::1]
+[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+>>> y[::-1]
+[9, 8, 7, 6, 5, 4, 3, 2, 1, 0]
+>>> 
+
+********************************************************************************************************
+
+7/1/18
+
+**Continue Statement**
+
+>>> for i in range(10):
+...     if i%5==0:
+...        continue
+...     print(i)
+... 
+1
+2
+3
+4
+6
+7
+8
+9
+>>> 
+
+*******************************************************************************************************
+
+25/12/2017
+
+>>>
+>>> x
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'x' is not defined
+>>> x="hello"
+>>> x.capitalize()
+'Hello'
+>>> x.count("l")
+2
+>>> x="hello3by"
+>>> x.isalnum()
+True
+>>> x="hello"
+>>> x.isalnum()
+True
+>>> x.islower()
+True
+>>> x.isupper()
+False
+>>> x.isdigit()
+False
+>>> x.isalpha()
+True
+>>> x="hello3ertyui"
+>>> x.isalpha()
+False
+>>> x="hello 3 ertyui"
+>>> x.isspace()
+False
+>>> x=["india","is","my","country"]
+>>> y=" ".join(x)
+>>> y
+'india is my country'
+>>> y="".join(x)
+>>> y
+'indiaismycountry'
+>>> y="#".join(x)
+>>> y
+'india#is#my#country'
+>>> y="#".join("hello")
+>>> y
+'h#e#l#l#o'
+
+
+>>>
+>>> x="hello"
+>>> x.startswith(h)
+>>> x.startswith("h")
+True
+>>> x.endswith("h")
+False
+>>> x.endswith("o")
+True
+>>> x.index("o")
+4
+>>> x.index("l")
+2
+>>> x.index("z")
+>>> x.find("z")
+-1
+>>>
+
+*****************************************************************************************************
+26/1/2018
+
+Collections
+
+>>> import collections
+>>> help(collections.deque)
+
+on second prompt try out following things
+
+mangesh@mangesh-VPCEH35EN:~$ python3
+Python 3.5.2 (default, Nov 23 2017, 16:37:01) 
+[GCC 5.4.0 20160609] on linux
+Type "help", "copyright", "credits" or "license" for more information.
+>>> import collections
+>>> x=collections.deque
+>>> x.append(1)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: descriptor 'append' requires a 'collections.deque' object but received a 'int'
+>>> x=collections.deque()
+>>> x.append(1)
+>>> x.append(2)
+>>> x.append(3)
+>>> x.pop()
+3
+>>> print(x)
+deque([1, 2])
+>>> x.popleft()
+1
+>>> x.popleft()
+2
+>>> x.popleft()
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+IndexError: pop from an empty deque
+>>> x.append(3)
+>>> x.append(2)
+>>> x.append(1)
+>>> x.appendleft(6)
+>>> print(x)
+deque([6, 3, 2, 1])
+>>> x.popleft()
+6
+>>> 
+
+
+******************************************************************************************************************************
+
+18/2/2018
+
+os.path all method tryouts
+
+mangesh@mangesh-ThinkPad-X1-Carbon-2nd:~$ python3
+Python 3.5.2 (default, Nov 23 2017, 16:37:01) 
+[GCC 5.4.0 20160609] on linux
+Type "help", "copyright", "credits" or "license" for more information.
+>>> import os.path
+>>> os.path.abspath list
+  File "<stdin>", line 1
+    os.path.abspath list
+                       ^
+SyntaxError: invalid syntax
+>>> os.path.abspath(list)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "/usr/lib/python3.5/posixpath.py", line 357, in abspath
+    if not isabs(path):
+  File "/usr/lib/python3.5/posixpath.py", line 64, in isabs
+    return s.startswith(sep)
+AttributeError: type object 'list' has no attribute 'startswith'
+>>> os.path.abspath("list")
+'/home/mangesh/list'
+>>> os.path.basename
+<function basename at 0xb71ed2fc>
+>>> os.path.basename("list")
+'list'
+>>> os.path.basename(list)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "/usr/lib/python3.5/posixpath.py", line 139, in basename
+    i = p.rfind(sep) + 1
+AttributeError: type object 'list' has no attribute 'rfind'
+>>> os.path.basename("list")
+'list'
+>>> 
+KeyboardInterrupt
+>>> os.path.basename("/home/mangesh/list")
+'list'
+>>> os.path.exixts("/home/mangesh/list")
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+AttributeError: module 'posixpath' has no attribute 'exixts'
+>>> os.path.exists("/home/mangesh/list")
+True
+>>> os.path.exists("/home/mangesh/list1")
+False
+>>> os.path.commonprefix("/home/mangesh/list")
+''
+>>> os.path.commonprefix("list")
+''
+>>> os.path.commonprefix()
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: commonprefix() missing 1 required positional argument: 'm'
+>>> os.path.commonprefix("/home/mangesh/list","/home/mangesh/FileHandling)
+  File "<stdin>", line 1
+    os.path.commonprefix("/home/mangesh/list","/home/mangesh/FileHandling)
+                                                                         ^
+SyntaxError: EOL while scanning string literal
+>>> os.path.commonprefix("/home/mangesh/list","/home/mangesh/FileHandling")
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: commonprefix() takes 1 positional argument but 2 were given
+>>> m=[>>> os.path.commonprefix("/home/mangesh/list","/home/mangesh/FileHandling")
+  File "<stdin>", line 1
+    m=[>>> os.path.commonprefix("/home/mangesh/list","/home/mangesh/FileHandling")
+        ^
+SyntaxError: invalid syntax
+>>> m=["/home/mangesh/list","/home/mangesh/FileHandling"]>>> os.path.commonprefix(m)'/home/mangesh/'
+>>> os.path.dirname("list")
+''
+>>> os.path.dirname("/home/mangesh/list")
+'/home/mangesh'
+>>> os.path.dirname("/home/mangesh")
+'/home'
+>>> os.path.dirname("/home")
+'/'
+>>> os.path.dirname("/")
+'/'
+>>> os.path.isdir("/")
+True
+>>> os.path.isdir("/home/mangesh/list")
+False
+>>> os.path.isdir("/home/mangesh")
+True
+>>> os.path.isfile("/home/mangesh")
+False
+>>> os.path.isfile("/home/mangesh/list")
+True
+>>> os.path.islink("/home/mangesh/list")
+False
+>>> os.path.islink("/home/mangesh")
+False
+>>> os.path.islink("/home")
+False
+>>> os.path.islink("/")
+False
+>>> os.path.islink("a.txt")
+True
+>>> os.path.islink("demo")
+False
+>>> os.path.join("/home/mangesh/list","/home/mangesh/demo")
+'/home/mangesh/demo'
+>>> os.path.join("/home/mangesh/","/home/mangesh/")
+'/home/mangesh/'
+>>> os.path.join("/home/mangesh/list","/home/mangesh/")
+'/home/mangesh/'
+>>> os.path.join("/home/mangesh/","demo1")
+'/home/mangesh/demo1'
+>>> os.path.join("/home/mangesh","demo1")
+'/home/mangesh/demo1'
+>>> os.path.split("/home/mangesh","list")
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: split() takes 1 positional argument but 2 were given
+>>> os.path.split("/home/mangesh/list")
+('/home/mangesh', 'list')
+>>> os.path.split("/home/mangesh/list.txt")
+('/home/mangesh', 'list.txt')
+>>> os.path.splittext("/home/mangesh/list.txt")
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+AttributeError: module 'posixpath' has no attribute 'splittext'
+>>> os.path.splitext("/home/mangesh/list.txt")
+('/home/mangesh/list', '.txt')
+>>> os.path.expanduser("/home/mangesh/list.txt")
+'/home/mangesh/list.txt'
+>>> os.path.expanduser("~a.txt")
+'~a.txt'
+>>> os.path.expanduser("/home/mangesh/~list")
+'/home/mangesh/~list'
+>>> os.path.getmtime("/home/mangesh/list")
+1517329561.499152
+>>> os.path.getmtime("list")
+1517329561.499152
+>>> os.path.expanduser("~list")
+'/var/list'
+>>> os.path.expanduser("~a.txt")
+'~a.txt'
+>>> os.path.expanduser("/~a.txt")
+'/~a.txt'
+>>> os.path.expanduser("~/a.txt")
+'/home/mangesh/a.txt'
+>>> os.path.walk("/home/mangesh/c-first-revision/Array")
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+AttributeError: module 'posixpath' has no attribute 'walk'
+>>> os.walk("/home/mangesh/c-first-revision/Array")
+<generator object walk at 0xb67271ac>
+>>> 
+
+
+
+to create link and soft link also to evaluate islink() method
+
+ ln list demo
+mangesh@mangesh-ThinkPad-X1-Carbon-2nd:~$ ln -s demo a.txt
+mangesh@mangesh-ThinkPad-X1-Carbon-2nd:~$ ls -lrt list demo a.txt
+
+*******************************************************************************************************************
+
+14/4/2018
+
+install robot framework

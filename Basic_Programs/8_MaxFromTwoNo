@@ -1,0 +1,25 @@
+#!/usr/bin/python
+
+num1=eval(input("Enter the 1st No :"))
+
+num2=eval(input("Enter the 2nd No :"))
+
+
+if num1>num2:
+	print("First no is Maximum: ",num1)
+else:
+	print("Second no is Maximum: ",num2)
+
+
+'''
+	output-:
+			mangesh@mangesh-VPCEH35EN:~/10th Python Batch/Basic Programs$ python3 8_MaxFromTwoNo
+			Enter the 1st No :45
+			Enter the 2nd No :23
+			First no is Maximum:  45
+			mangesh@mangesh-VPCEH35EN:~/10th Python Batch/Basic Programs$ python3 8_MaxFromTwoNo
+			Enter the 1st No :23
+			Enter the 2nd No :45
+			Second no is Maximum:  45
+			mangesh@mangesh-VPCEH35EN:~/10th Python Batch/Basic Programs$ 
+'''

@@ -1,0 +1,19 @@
+#!/usr/bin/python
+
+num1=eval(input("Enter the 1st no:"))
+
+num2=eval(input("Enter the 2nd no:"))
+
+
+if num1<num2:
+	print("First no is Minimum: ",num1)
+else:
+	print("Second no is Minimum: ",num2)
+
+'''
+	output-:
+		mangesh@mangesh-VPCEH35EN:~/10th Python Batch/Basic Programs$ python3 9_MinFromTwoNo
+		Enter the 1st no:23
+		Enter the 2nd no:34
+		First no is Minimum:  23
+'''
